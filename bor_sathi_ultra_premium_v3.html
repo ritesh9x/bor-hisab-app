@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d5c50">
+<title>બોર સાથી | બોરવેલ હિસાબ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap');
+:root{--green:#0d5c50;--green2:#147b68;--mint:#e8f5ef;--ink:#182522;--muted:#718078;--bg:#f4f7f4;--line:#e4ebe6;--white:#fff;--red:#c64d4d;--amber:#a96b16;--shadow:0 12px 35px #153d2d0b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Gujarati","DM Sans",sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}.side{background:#103f37;color:#eaf5ef;padding:24px 16px;position:sticky;top:0;height:100vh}.brand{display:flex;align-items:center;gap:11px;padding:4px 8px 28px}.logo{width:42px;height:42px;border-radius:14px;background:#d6f0df;color:#105647;display:grid;place-items:center;font-size:22px;font-weight:800}.brand b{font-size:19px}.brand small{display:block;color:#a9c8bd;font-size:11px;margin-top:2px}.navlabel{font-size:10px;letter-spacing:1.3px;color:#91b5a8;padding:12px 10px 7px}.nav button{width:100%;border:0;background:transparent;color:#d3e4dc;padding:12px;border-radius:11px;text-align:left;margin:2px 0;display:flex;gap:12px;align-items:center}.nav button.active,.nav button:hover{background:#1c6657;color:white}.nav .ico{width:20px;text-align:center;font-size:16px}.sidefoot{position:absolute;bottom:20px;left:22px;right:22px;color:#a9c8bd;font-size:11px;line-height:1.7}.main{min-width:0;padding:26px clamp(16px,3vw,42px) 50px;max-width:1600px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}.eyebrow{color:var(--green2);font-size:11px;font-weight:700;letter-spacing:1px}.top h1{font-size:26px;margin:3px 0 0}.top p{color:var(--muted);margin:4px 0 0}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:white;color:var(--ink);font-weight:600}.btn.primary{background:var(--green);color:white;border-color:var(--green)}.btn.soft{background:var(--mint);color:var(--green);border-color:transparent}.btn.danger{color:var(--red);background:#fff7f7}.btn.sm{padding:6px 9px;font-size:12px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.stat,.panel{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:17px}.stat .sicon{width:34px;height:34px;border-radius:11px;background:var(--mint);display:grid;place-items:center;font-size:16px}.stat label{display:block;color:var(--muted);font-size:12px;margin-top:12px}.stat strong{font-size:23px;display:block;margin-top:3px;letter-spacing:-.5px}.stat small{color:var(--muted);font-size:11px}.panel{padding:20px;margin-bottom:17px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.panel h2{font-size:17px;margin:0}.muted{color:var(--muted)}.small{font-size:12px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.formgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.field label{display:block;font-size:12px;font-weight:700;margin:0 0 6px}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:10px;background:#fff;padding:10px 11px;min-height:42px;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green2);box-shadow:0 0 0 3px #147b6815}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:680px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}th{background:#f7faf7;color:#627169;font-size:11px;white-space:nowrap}td{font-size:13px}tr:last-child td{border-bottom:0}td input,td select{width:100%;min-width:85px;border:1px solid var(--line);border-radius:8px;padding:7px;background:white;color:var(--ink)}td .wide{min-width:180px}.pill{display:inline-block;border-radius:99px;padding:4px 9px;background:var(--mint);color:var(--green);font-size:11px;font-weight:700}.pill.red{background:#fff0f0;color:var(--red)}.pill.amber{background:#fff5e5;color:var(--amber)}.barrow{display:grid;grid-template-columns:125px 1fr 85px;gap:10px;align-items:center;margin:13px 0;font-size:12px}.bar{height:9px;border-radius:20px;background:#edf2ee;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#0d5c50,#6bb89a);border-radius:20px}.empty{text-align:center;padding:28px;color:var(--muted)}.hidden{display:none!important}.tab{display:none}.tab.active{display:block}.notice{background:#fff9e9;border:1px solid #f0e3bd;border-radius:12px;padding:12px 14px;color:#76541c;font-size:12px;line-height:1.7;margin-bottom:16px}.footerhint{font-size:11px;color:var(--muted);margin-top:10px}.balance-pos{color:var(--red);font-weight:700}.balance-neg{color:var(--green);font-weight:700}.mobilebar{display:none}
+@media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.app{display:block;padding-bottom:70px}.side{display:none}.main{padding:18px 13px 35px}.top{align-items:flex-start;flex-direction:column}.top h1{font-size:22px}.cards{gap:9px}.stat{padding:13px}.stat strong{font-size:19px}.stat label{font-size:11px}.grid2,.formgrid{grid-template-columns:1fr}.panel{padding:15px}.mobilebar{display:flex;position:fixed;bottom:0;left:0;right:0;background:#103f37;z-index:20;justify-content:space-around;padding:8px 3px calc(8px + env(safe-area-inset-bottom))}.mobilebar button{background:none;border:0;color:#cce0d7;font-size:10px;display:grid;gap:3px;justify-items:center}.mobilebar button.active{color:white}.mobilebar span{font-size:18px}}
+@media print{.side,.mobilebar,.actions,.btn,.no-print{display:none!important}.app{display:block}.main{padding:0;max-width:none}.tab{display:block!important}.panel,.stat{box-shadow:none;break-inside:avoid}.cards{grid-template-columns:repeat(4,1fr)}body{background:white}}
+</style>
+
+<style id="premium-dark-refresh">
+:root{
+ --green:#23c6a1;--green2:#35d6b1;--mint:#102f2b;--ink:#edf7f4;
+ --muted:#9aada8;--bg:#091311;--line:#203b35;--white:#101e1b;
+ --red:#ff777e;--amber:#f4c36a;--shadow:0 16px 42px #00000030;
+}
+html{background:#091311}
+body{background:radial-gradient(ellipse at 75% -10%,#123b32 0%,transparent 35%),#091311;color:var(--ink)}
+.side{background:linear-gradient(180deg,#102c27 0%,#0b1c19 100%);border-right:1px solid #24463d}
+.logo{background:linear-gradient(135deg,#b9ffdf,#36cda7);color:#073d32;box-shadow:0 8px 24px #23c6a133}
+.brand b{color:#f3fffb;letter-spacing:.2px}
+.brand small,.sidefoot{color:#8ba9a0}
+.navlabel{color:#6f9c8e}
+.nav button{color:#b7cbc4;transition:.2s}
+.nav button.active,.nav button:hover{background:linear-gradient(100deg,#176454,#12483e);color:#fff;box-shadow:inset 3px 0 #48e0b7}
+.main{max-width:1700px}
+.top{margin-bottom:20px}
+.top h1{color:#f2fbf8;font-weight:800;letter-spacing:-.5px}
+.top p,.muted,.footerhint{color:#91a8a1}
+.eyebrow{color:#52d8b5}
+.btn{background:#142722;border-color:#2b4941;color:#d9e9e3;transition:.2s}
+.btn:hover{border-color:#43c9a7;transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(135deg,#1da987,#147c68);border-color:#1da987;color:white;box-shadow:0 7px 18px #0e9c7830}
+.btn.soft{background:#153c33;color:#71e4c3}
+.btn.danger{background:#351d20;color:#ff9297;border-color:#5a3034}
+.stat,.panel{background:linear-gradient(145deg,#14231f,#101c19);border-color:#254139;box-shadow:var(--shadow)}
+.stat{position:relative;overflow:hidden;transition:.22s}
+.stat:after{content:"";position:absolute;width:100px;height:100px;border-radius:50%;right:-45px;top:-48px;background:#2cc59b0c}
+.stat:hover{transform:translateY(-3px);border-color:#367d69}
+.stat .sicon{background:#173d34;color:#6be3c1}
+.stat label{color:#9bb1a9}
+.stat strong{color:#f1fcf8}
+.stat small{color:#829a91}
+.panel h2{color:#eaf7f2}
+.field label{color:#c2d7cf}
+.field input,.field select,.field textarea,td input,td select{
+ background:#0c1916;border:1px solid #2a463e;color:#e6f4ee;color-scheme:dark
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#39cba6;box-shadow:0 0 0 3px #23c6a11c}
+.tablewrap{border-color:#29453d}
+table{color:#e3f0eb}
+th{background:#172a25;color:#9eb8ae;border-color:#29453d}
+td{border-color:#203a33}
+tr:hover td{background:#152923}
+.pill{background:#153f34;color:#69e2bd}
+.pill.red{background:#3c2024;color:#ff9a9e}
+.pill.amber{background:#3b3020;color:#f5ce7b}
+.bar{background:#203a32}
+.bar i{background:linear-gradient(90deg,#169c7c,#5ce3b9)}
+.empty{color:#8da69d}
+.notice{background:#352c1b;border-color:#66512b;color:#f1d28d}
+.balance-pos{color:#ff969b}.balance-neg{color:#65dfb7}
+.welcome-banner{
+ display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;overflow:hidden;
+ padding:26px 30px;margin:0 0 20px;border:1px solid #236b58;border-radius:20px;
+ background:radial-gradient(circle at 80% 40%,#1d8066 0%,transparent 35%),linear-gradient(115deg,#12483d,#0d3029 65%,#10241f);
+ box-shadow:0 18px 42px #0004;min-height:190px
+}
+.welcome-banner:before{content:"";position:absolute;inset:0;opacity:.12;background-image:radial-gradient(#a5ffe0 1px,transparent 1px);background-size:19px 19px;mask-image:linear-gradient(90deg,transparent,#000)}
+.welcome-copy{position:relative;z-index:1}
+.welcome-kicker{font-size:11px;font-weight:800;letter-spacing:1.4px;color:#75e8c8;margin-bottom:8px}
+.welcome-copy h2{font-size:clamp(21px,3vw,30px);line-height:1.35;margin:0;color:#f2fff9}
+.welcome-copy h2 span{color:#75e8c8}
+.welcome-copy p{font-size:12px;color:#b2d5c9;margin:9px 0 16px}
+.welcome-cta{border:0;border-radius:10px;background:#c4ffe8;color:#075340;padding:10px 15px;font-weight:800;box-shadow:0 7px 20px #001e1838}
+.welcome-art{width:180px;min-width:140px;height:140px;position:relative;display:grid;place-items:center}
+.water-orbit{position:absolute;border:1px solid #7cf3cc55;border-radius:50%;transform:rotate(-25deg)}
+.orbit-one{width:145px;height:76px}.orbit-two{width:110px;height:130px;transform:rotate(45deg)}
+.water-drop{width:76px;height:76px;border-radius:25px 25px 30px 8px;transform:rotate(-45deg);display:grid;place-items:center;background:linear-gradient(145deg,#a9ffe1,#1cb58d);font-size:34px;box-shadow:0 12px 35px #001d18aa}
+.water-caption{position:absolute;bottom:-2px;right:-10px;font-size:9px;letter-spacing:2px;color:#c5f9e8;text-align:center;font-weight:800}
+.water-caption small{font-size:7px;letter-spacing:1.5px;color:#7ccdb3}
+.mobilebar{background:#102c27;border-top:1px solid #285046;box-shadow:0 -8px 24px #0005}
+.mobilebar button{color:#8eaaa0}.mobilebar button.active{color:#70e6c4}
+@media(max-width:700px){
+ .welcome-banner{padding:20px 17px;min-height:160px;border-radius:16px}
+ .welcome-art{width:105px;min-width:100px;height:115px;transform:scale(.82);transform-origin:center}
+ .welcome-copy h2{font-size:19px}
+ .welcome-copy p{max-width:230px;font-size:10px}
+ .welcome-cta{padding:9px 11px;font-size:11px}
+ .top .actions{width:100%}.top .actions .btn{flex:1}
+}
+@media(max-width:390px){.welcome-art{display:none}}
+@media print{
+ body{background:white!important;color:#111!important}
+ .panel,.stat{background:white!important;color:#111!important;border:1px solid #ddd!important}
+ .panel h2,.stat strong,td,th{color:#111!important}
+ .welcome-banner{display:none!important}
+}
+</style>
+
+
+<style id="ultra-premium-v3">
+:root{--accent:#35d6b1;--accent2:#8af0d0;--surface:#13231f;--surface2:#172c26;--stroke:#29483e}
+body{background:radial-gradient(ellipse at 70% -15%,#1a5142 0%,transparent 32%),radial-gradient(ellipse at 5% 45%,#102a24 0%,transparent 32%),#08120f;letter-spacing:.05px}
+.app{background:transparent}
+.side{background:linear-gradient(180deg,#102b24 0%,#0a1915 100%);box-shadow:12px 0 45px #0002;z-index:5}
+.logo{border-radius:15px;background:linear-gradient(145deg,#d5fff0,#39cba5);box-shadow:0 8px 25px #32d5ac35}
+.brand b{font-size:20px}
+.nav button{border:1px solid transparent;border-radius:13px;padding:12px 13px;margin:3px 0;font-size:13px}
+.nav button.active{background:linear-gradient(100deg,#1a6a55,#164b3e);border-color:#3ac39a33;box-shadow:0 8px 20px #0002,inset 3px 0 #75f1cd}
+.nav button:hover{transform:translateX(3px)}
+.nav .ico{width:22px;height:22px;display:grid;place-items:center;background:#ffffff0b;border-radius:7px}
+.main{padding-top:28px}
+.top{align-items:center;margin-bottom:20px}
+.top h1{font-size:29px;letter-spacing:-.8px}
+.top p{font-size:12px}
+.btn{border-radius:12px;padding:10px 14px}
+.btn.primary{background:linear-gradient(135deg,#27bd96,#147b63);box-shadow:0 8px 22px #0c9a7530}
+.welcome-banner{border-radius:24px;min-height:205px;padding:30px 34px;background:radial-gradient(circle at 82% 40%,#2c9874 0%,transparent 33%),linear-gradient(115deg,#164d3e 0%,#10362c 58%,#10231e 100%);border-color:#3b9d7a55;box-shadow:0 22px 55px #0004}
+.welcome-banner:after{content:"";position:absolute;inset:auto -5% -75% 35%;height:170px;border:1px solid #a5ffe01c;border-radius:50%;transform:rotate(-9deg);box-shadow:0 0 0 22px #a5ffe008,0 0 0 45px #a5ffe006}
+.welcome-copy h2{font-size:clamp(23px,3.3vw,34px);letter-spacing:-.7px}
+.water-drop{box-shadow:0 0 35px #54e5bb50,0 18px 35px #001d18aa}
+.stat,.panel{border-radius:19px;background:linear-gradient(145deg,#162923 0%,#101d18 100%);border:1px solid #2a493e;box-shadow:0 15px 42px #0002}
+.stat{padding:19px;min-height:138px}
+.stat .sicon{width:39px;height:39px;border-radius:13px;background:linear-gradient(145deg,#1e5544,#173b31);font-size:18px}
+.stat label{margin-top:13px}
+.stat strong{font-size:25px;letter-spacing:-.7px}
+.panel{padding:21px}
+.panel h2{font-size:16px}
+.panelhead{margin-bottom:16px}
+.quick-launch{margin:4px 0 17px;padding:21px;border:1px solid #2a493e;border-radius:20px;background:linear-gradient(145deg,#142720,#0f1d18);box-shadow:0 15px 40px #0002}
+.quick-heading,.insight-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+.quick-eyebrow{font:800 9px "DM Sans",sans-serif;letter-spacing:1.6px;color:#55d8b1}
+.quick-heading h2,.insight-top h2{margin:4px 0;color:#effcf6;font-size:18px}
+.quick-heading p,.insight-top p{margin:0;color:#8ea99d;font-size:11px}
+.live-chip,.insight-badge{font:700 9px "DM Sans",sans-serif;letter-spacing:1px;color:#70e5c2;background:#174536;border:1px solid #2b745a;border-radius:99px;padding:8px 11px;white-space:nowrap}
+.live-chip i{display:inline-block;width:6px;height:6px;background:#65e9b9;border-radius:50%;margin-right:6px;box-shadow:0 0 10px #65e9b9}
+.quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.quick-card{position:relative;text-align:left;min-height:126px;border:1px solid #29483d;border-radius:16px;padding:15px;background:linear-gradient(145deg,#1a342b,#12231d);color:#effcf6;display:flex;flex-direction:column;align-items:flex-start;gap:6px;overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s}
+.quick-card:before{content:"";position:absolute;width:100px;height:100px;border-radius:50%;right:-45px;bottom:-55px;background:#39d3a21a;transition:transform .3s}
+.quick-card:hover{transform:translateY(-5px);border-color:#50d4ae;box-shadow:0 13px 28px #0003}
+.quick-card:active{transform:scale(.98)}
+.quick-icon{width:35px;height:35px;border-radius:11px;display:grid;place-items:center;background:#ffffff10;font-size:17px;margin-bottom:3px}
+.quick-card b{font-size:13px}
+.quick-card small{font-size:10px;color:#92aca0;line-height:1.5}
+.quick-arrow{position:absolute;right:13px;top:14px;color:#73e5c3;font-size:15px}
+.quick-water .quick-icon{background:#174e48}.quick-member .quick-icon{background:#293d5a}.quick-pay .quick-icon{background:#554322}.quick-report .quick-icon{background:#43335b}
+.insight-panel{margin:0 0 18px;padding:21px;border:1px solid #28634e;border-radius:20px;background:radial-gradient(circle at 90% 0%,#1b5742 0%,transparent 35%),linear-gradient(120deg,#142c23,#102019);box-shadow:0 16px 42px #0002}
+.insight-top{margin-bottom:18px}
+.insight-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.insight-metrics>div{padding:13px 15px;border-radius:13px;background:#ffffff08;border:1px solid #ffffff0d}
+.insight-metrics span,.insight-metrics small{display:block;color:#a1b9ac;font-size:10px}
+.insight-metrics strong{display:block;margin:5px 0;color:#eafff5;font-size:21px;letter-spacing:-.5px}
+.insight-progress{margin-top:17px}
+.progress-label{display:flex;justify-content:space-between;color:#b6d2c5;font-size:10px;margin-bottom:7px}
+.progress-track{height:8px;background:#ffffff13;border-radius:30px;overflow:hidden}
+.progress-track i{display:block;width:0;height:100%;border-radius:30px;background:linear-gradient(90deg,#2ab88f,#9af5d3);box-shadow:0 0 16px #5ce0b4;transition:width .7s ease}
+.floating-add{display:none;position:fixed;right:18px;bottom:88px;width:56px;height:56px;border:0;border-radius:19px;background:linear-gradient(145deg,#5ce3b7,#159b78);color:#073b2e;font-size:29px;box-shadow:0 12px 28px #0006,0 0 0 6px #39d6a51a;z-index:30}
+.toast-host{position:fixed;right:22px;bottom:24px;z-index:100;display:grid;gap:8px}
+.toast-message{padding:12px 16px;border:1px solid #3d8e70;border-radius:13px;background:#173c2e;color:#eafff4;box-shadow:0 14px 35px #0005;animation:toastIn .25s ease;font-size:12px}
+@keyframes toastIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.tablewrap{border-radius:14px}
+th{letter-spacing:.2px}
+tr{transition:background .18s}
+.stat,.panel,.quick-launch,.insight-panel{animation:riseIn .45s both}
+@keyframes riseIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1000px){.quick-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){
+ .main{padding:15px 12px 100px}
+ .top{gap:12px}.top h1{font-size:24px}
+ .welcome-banner{padding:22px 18px;min-height:176px;border-radius:20px}
+ .welcome-art{transform:scale(.8);margin-right:-10px}
+ .quick-launch,.insight-panel{padding:16px;border-radius:17px}
+ .quick-grid{gap:8px}
+ .quick-card{min-height:116px;padding:12px;border-radius:14px}
+ .quick-heading h2,.insight-top h2{font-size:16px}
+ .live-chip,.insight-badge{font-size:8px;padding:7px}
+ .insight-metrics{gap:7px}
+ .insight-metrics>div{padding:10px 8px}
+ .insight-metrics strong{font-size:16px}
+ .insight-metrics span,.insight-metrics small{font-size:9px}
+ .floating-add{display:block}
+ .toast-host{left:12px;right:12px;bottom:82px}
+}
+@media(max-width:380px){.welcome-art{display:none}.quick-card small{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="app">
+<aside class="side">
+ <div class="brand"><div class="logo">💧</div><div><b>બોર સાથી</b><small>WELL ACCOUNT MANAGER</small></div></div>
+ <div class="navlabel">મુખ્ય મેનુ</div>
+ <nav class="nav" id="nav">
+  <button class="active" data-tab="home"><span class="ico">▦</span> ડેશબોર્ડ</button>
+  <button data-tab="partners"><span class="ico">♧</span> ભાગીદારો</button>
+  <button data-tab="lands"><span class="ico">⌂</span> જમીન / ખેતર</button>
+  <button data-tab="irrigation"><span class="ico">◉</span> પિયત એન્ટ્રી</button>
+  <button data-tab="payments"><span class="ico">₹</span> ચુકવણી</button>
+  <button data-tab="expenses"><span class="ico">↗</span> ખર્ચ</button>
+  <button data-tab="reports"><span class="ico">▤</span> રિપોર્ટ</button>
+  <div class="navlabel">સેટિંગ્સ</div>
+  <button data-tab="settings"><span class="ico">⚙</span> સેટિંગ્સ / બેકઅપ</button>
+ </nav>
+ <div class="sidefoot">તમારો હિસાબ, તમારી પાસે.<br>ડેટા આ ડિવાઇસમાં સેવ થાય છે.</div>
+</aside>
+<main class="main">
+<header class="top"><div><div class="eyebrow">BOREWELL MANAGEMENT</div><h1 id="pageTitle">ડેશબોર્ડ</h1><p id="today"></p></div><div class="actions"><button class="btn" onclick="exportData()">⬇ બેકઅપ</button><button class="btn primary" onclick="go('irrigation')">＋ નવી પિયત એન્ટ્રી</button></div></header>
+
+<section class="welcome-banner">
+  <div class="welcome-copy">
+    <div class="welcome-kicker">તમારા બોરનો સ્માર્ટ હિસાબ</div>
+    <h2>પાણીનો દરેક કલાક,<br><span>હવે એકદમ સરળ હિસાબમાં.</span></h2>
+    <p>ભાગીદારો • ખેતરો • પિયત • ચુકવણી — બધું એક જ જગ્યાએ.</p>
+    <button class="welcome-cta" onclick="go('irrigation')">＋ નવી પિયત એન્ટ્રી</button>
+  </div>
+  <div class="welcome-art" aria-hidden="true">
+    <div class="water-orbit orbit-one"></div><div class="water-orbit orbit-two"></div>
+    <div class="water-drop">💧</div>
+    <div class="water-caption">BOR SATHI<br><small>WATER ACCOUNT</small></div>
+  </div>
+</section>
+
+<div id="home" class="tab active">
+ <div class="cards">
+  <div class="stat"><div class="sicon">👥</div><label>કુલ ભાગીદારો</label><strong id="sPartners">0</strong><small>રજિસ્ટર્ડ ભાગીદારો</small></div>
+  <div class="stat"><div class="sicon">⏱</div><label>કુલ પિયત કલાક</label><strong id="sHours">0</strong><small>બધી પિયત એન્ટ્રીનો સરવાળો</small></div>
+  <div class="stat"><div class="sicon">₹</div><label>પાણીની કુલ આવક</label><strong id="sIncome">₹0</strong><small>કલાક × કલાકદીઠ દર</small></div>
+  <div class="stat"><div class="sicon">⌁</div><label>ચુકવણી બાકી</label><strong id="sDue">₹0</strong><small>પાણીના બિલ સામે</small></div>
+ </div>
+ <section class="quick-launch">
+  <div class="quick-heading"><div><span class="quick-eyebrow">SMART SHORTCUTS</span><h2>ઝડપી કામ</h2><p>એક ક્લિકમાં જરૂરી હિસાબ સુધી પહોંચો.</p></div><span class="live-chip"><i></i> LIVE WORKSPACE</span></div>
+  <div class="quick-grid">
+   <button class="quick-card quick-water" onclick="go('irrigation')"><span class="quick-icon">💧</span><b>નવી પિયત</b><small>કલાક અને પાણીનું બિલ નોંધો</small><span class="quick-arrow">↗</span></button>
+   <button class="quick-card quick-member" onclick="go('partners')"><span class="quick-icon">👥</span><b>ભાગીદારો</b><small>નામ, હિસ્સો અને બાકી જુઓ</small><span class="quick-arrow">↗</span></button>
+   <button class="quick-card quick-pay" onclick="go('payments')"><span class="quick-icon">₹</span><b>ચુકવણી</b><small>નવી વસૂલાત દાખલ કરો</small><span class="quick-arrow">↗</span></button>
+   <button class="quick-card quick-report" onclick="go('reports')"><span class="quick-icon">▥</span><b>રિપોર્ટ</b><small>સંપૂર્ણ હિસાબ તપાસો</small><span class="quick-arrow">↗</span></button>
+  </div>
+ </section>
+ <section class="insight-panel">
+  <div class="insight-top"><div><span class="quick-eyebrow">YOUR BOREWELL OVERVIEW</span><h2>હિસાબની એક નજર</h2><p>તમારા બોરની કામગીરીનું લાઇવ ચિત્ર.</p></div><div class="insight-badge">✦ SMART INSIGHTS</div></div>
+  <div class="insight-metrics">
+   <div><span>કુલ પિયત</span><strong id="insightHours">0 કલાક</strong><small>રેકોર્ડ થયેલા કલાક</small></div>
+   <div><span>ચુકવણીની સ્થિતિ</span><strong id="insightPaid">0%</strong><small>કુલ બિલ સામે વસૂલાત</small></div>
+   <div><span>સામૂહિક ખર્ચ</span><strong id="insightExpense">₹0</strong><small>નોંધાયેલ કુલ ખર્ચ</small></div>
+  </div>
+  <div class="insight-progress"><div class="progress-label"><span>ચુકવણી પ્રગતિ</span><b id="progressLabel">0%</b></div><div class="progress-track"><i id="paymentProgress"></i></div></div>
+ </section>
+ <div class="grid2">
+  <section class="panel"><div class="panelhead"><h2>ભાગીદારોનો પાણીનો હિસાબ</h2><button class="btn sm" onclick="go('reports')">વિગત જુઓ →</button></div><div id="partnerBars"></div></section>
+  <section class="panel"><div class="panelhead"><h2>ઝડપી સારાંશ</h2></div><div class="barrow"><span>કુલ ખર્ચ</span><b id="sExpense">₹0</b><span></span></div><div class="barrow"><span>ચુકવેલ રકમ</span><b id="sPaid">₹0</b><span></span></div><div class="barrow"><span>કુલ વિઘા</span><b id="sVigha">0</b><span></span></div><div class="barrow"><span>કુલ હિસ્સો</span><b id="sShare">0%</b><span></span></div><p class="footerhint">નોંધ: પાણીની આવક અને સામૂહિક ખર્ચ અલગ ગણવામાં આવે છે.</p></section>
+ </div>
+ <section class="panel"><div class="panelhead"><h2>તાજેતરની પિયત એન્ટ્રીઓ</h2><button class="btn sm" onclick="go('irrigation')">બધી એન્ટ્રી →</button></div><div class="tablewrap"><table><thead><tr><th>તારીખ</th><th>ભાગીદાર</th><th>ખેતર</th><th>કલાક</th><th>રકમ</th></tr></thead><tbody id="recentRows"></tbody></table></div></section>
+ <div class="notice">💡 <b>મહત્વપૂર્ણ:</b> પ્રથમ વખત ઉપયોગ કરતા પહેલાં ભાગીદારોના નામ, હિસ્સા અને ખેતરની વિગતો ચકાસો. કોઈપણ નાણાકીય હિસાબ માટે મૂળ નોંધપોથી સાથે સરખામણી કરવી.</div>
+</div>
+<div id="partners" class="tab">
+ <section class="panel"><div class="panelhead"><div><h2>ભાગીદારોની યાદી</h2><div class="muted small">નામ અને ભાગીદારીનો હિસ્સો મેનેજ કરો.</div></div><button class="btn primary" onclick="addPartner()">＋ ભાગીદાર ઉમેરો</button></div><div class="tablewrap"><table><thead><tr><th>#</th><th>ભાગીદારનું નામ</th><th>હિસ્સો</th><th>પાણી કલાક</th><th>પાણી રકમ</th><th>ચુકવેલ</th><th>બાકી</th><th></th></tr></thead><tbody id="partnerRows"></tbody><tfoot><tr><th colspan="2">કુલ હિસ્સો</th><th id="shareTotal">0</th><th colspan="5" id="shareWarning"></th></tr></tfoot></table></div></section>
+</div>
+<div id="lands" class="tab">
+ <section class="panel"><div class="panelhead"><div><h2>જમીન / ખેતરની નોંધ</h2><div class="muted small">માલિક, ખેતરનું નામ અને વિઘા પ્રમાણે યાદી.</div></div><button class="btn primary" onclick="addLand()">＋ જમીન ઉમેરો</button></div><div class="tablewrap"><table><thead><tr><th>#</th><th>માલિક</th><th>ખેતરનું નામ</th><th>વિઘા</th><th></th></tr></thead><tbody id="landRows"></tbody></table></div></section>
+</div>
+<div id="irrigation" class="tab">
+ <section class="panel"><div class="panelhead"><div><h2>નવી પિયત એન્ટ્રી</h2><div class="muted small">કલાક દાખલ કરતાં રકમ આપમેળે ગણાશે.</div></div></div>
+ <div class="formgrid">
+  <div class="field"><label>તારીખ</label><input type="date" id="iDate"></div>
+  <div class="field"><label>ભાગીદાર / પાણી લેનાર</label><select id="iPartner"></select></div>
+  <div class="field"><label>ખેતરનું નામ</label><input id="iField" list="landOptions" placeholder="ખેતર પસંદ કરો અથવા લખો"><datalist id="landOptions"></datalist></div>
+  <div class="field"><label>પિયત કલાક</label><input id="iHours" type="number" min="0" step=".25" placeholder="જેમ કે 2.5" oninput="previewCharge()"></div>
+  <div class="field"><label>કલાકદીઠ દર (₹)</label><input id="iRate" type="number" min="0" step=".01" oninput="previewCharge()"></div>
+  <div class="field"><label>કુલ રકમ</label><input id="iAmount" readonly value="₹ 0.00"></div>
+  <div class="field" style="grid-column:1/-1"><label>નોંધ (વૈકલ્પિક)</label><input id="iNote" placeholder="વધારાની માહિતી"></div>
+ </div><div class="actions" style="margin-top:15px"><button class="btn primary" onclick="saveIrrigation()">પિયત સેવ કરો</button><button class="btn" onclick="clearIrrigation()">ફોર્મ સાફ કરો</button></div></section>
+ <section class="panel"><div class="panelhead"><h2>પિયત રેકોર્ડ</h2><div class="field"><input id="iSearch" placeholder="નામ / ખેતર શોધો..." oninput="renderIrrigation()"></div></div><div class="tablewrap"><table><thead><tr><th>તારીખ</th><th>ભાગીદાર</th><th>ખેતર</th><th>કલાક</th><th>દર</th><th>રકમ</th><th>નોંધ</th><th></th></tr></thead><tbody id="irrigationRows"></tbody></table></div></section>
+</div>
+<div id="payments" class="tab">
+ <section class="panel"><div class="panelhead"><div><h2>ચુકવણી નોંધો</h2><div class="muted small">ભાગીદારે પાણીના બિલ સામે આપેલી રકમ નોંધો.</div></div></div>
+ <div class="formgrid"><div class="field"><label>તારીખ</label><input type="date" id="pDate"></div><div class="field"><label>ભાગીદાર</label><select id="pPartner"></select></div><div class="field"><label>ચુકવેલ રકમ (₹)</label><input type="number" id="pAmount" min="0" step=".01"></div><div class="field"><label>ચુકવણી રીત</label><select id="pMethod"><option>રોકડ</option><option>UPI</option><option>બેંક</option><option>અન્ય</option></select></div><div class="field"><label>નોંધ / રસીદ નંબર</label><input id="pNote"></div></div><div class="actions" style="margin-top:15px"><button class="btn primary" onclick="savePayment()">ચુકવણી સેવ કરો</button></div></section>
+ <section class="panel"><div class="panelhead"><h2>ચુકવણી ઇતિહાસ</h2></div><div class="tablewrap"><table><thead><tr><th>તારીખ</th><th>ભાગીદાર</th><th>રકમ</th><th>રીત</th><th>નોંધ</th><th></th></tr></thead><tbody id="paymentRows"></tbody></table></div></section>
+</div>
+<div id="expenses" class="tab">
+ <section class="panel"><div class="panelhead"><div><h2>બોરના સામૂહિક ખર્ચ</h2><div class="muted small">વીજળી, મોટર રિપેરિંગ, પાઇપ, મજૂરી વગેરે.</div></div></div>
+ <div class="formgrid"><div class="field"><label>તારીખ</label><input type="date" id="eDate"></div><div class="field"><label>ખર્ચનો પ્રકાર</label><select id="eCategory"><option>વીજળી બિલ</option><option>મોટર રિપેરિંગ</option><option>પાઇપ / સામાન</option><option>મજૂરી</option><option>ડીઝલ</option><option>અન્ય</option></select></div><div class="field"><label>રકમ (₹)</label><input type="number" id="eAmount" min="0" step=".01"></div><div class="field"><label>ખર્ચ કોણે ચૂકવ્યો?</label><select id="ePayer"></select></div><div class="field"><label>વિગત / બિલ નંબર</label><input id="eNote"></div></div><div class="actions" style="margin-top:15px"><button class="btn primary" onclick="saveExpense()">ખર્ચ સેવ કરો</button></div></section>
+ <section class="panel"><div class="panelhead"><h2>ખર્ચની યાદી</h2></div><div class="tablewrap"><table><thead><tr><th>તારીખ</th><th>પ્રકાર</th><th>રકમ</th><th>ચૂકવનાર</th><th>વિગત</th><th></th></tr></thead><tbody id="expenseRows"></tbody></table></div></section>
+</div>
+<div id="reports" class="tab">
+ <section class="panel"><div class="panelhead"><div><h2>ભાગીદાર મુજબ સંપૂર્ણ રિપોર્ટ</h2><div class="muted small">પાણીની રકમ, ચુકવણી અને બાકી અલગથી.</div></div><button class="btn" onclick="window.print()">🖨 પ્રિન્ટ / PDF</button></div><div class="tablewrap"><table><thead><tr><th>ભાગીદાર</th><th>હિસ્સો</th><th>કલાક</th><th>પાણીની રકમ</th><th>ચુકવેલ</th><th>બાકી</th><th>ખર્ચમાં હિસ્સો*</th></tr></thead><tbody id="reportRows"></tbody></table></div><p class="footerhint">* ખર્ચમાં હિસ્સો = કુલ સામૂહિક ખર્ચ × ભાગીદારનો હિસ્સો ÷ કુલ હિસ્સો. આ અલગ ગણતરી છે; પાણીની બાકી રકમમાં ઉમેરાતી નથી.</p></section>
+ <div class="grid2"><section class="panel"><h2>ખેતર મુજબ કુલ વિઘા</h2><div id="landReport"></div></section><section class="panel"><h2>કુલ નાણાકીય સારાંશ</h2><div id="financeReport"></div></section></div>
+</div>
+<div id="settings" class="tab">
+ <section class="panel"><h2>બોરની સેટિંગ્સ</h2><div class="formgrid" style="margin-top:15px"><div class="field"><label>બોર / ગ્રુપનું નામ</label><input id="boreName" placeholder="જેમ કે ગામનો બોર"></div><div class="field"><label>ડિફોલ્ટ કલાકદીઠ દર (₹)</label><input id="defaultRate" type="number" min="0" step=".01"></div><div class="field"><label>ઓપરેટરનું નામ</label><input id="operator" placeholder="ઓપરેટરનું નામ"></div></div><div class="actions" style="margin-top:15px"><button class="btn primary" onclick="saveSettings()">સેટિંગ્સ સેવ કરો</button></div></section>
+ <section class="panel"><h2>ડેટા બેકઅપ અને સુરક્ષા</h2><p class="muted">તમારો ડેટા આ બ્રાઉઝરના Local Storage માં સેવ થાય છે. ફોન / કમ્પ્યુટર બદલતા પહેલાં બેકઅપ ડાઉનલોડ કરો.</p><div class="actions"><button class="btn primary" onclick="exportData()">⬇ JSON બેકઅપ ડાઉનલોડ</button><label class="btn" for="importFile">⬆ બેકઅપ ઇમ્પોર્ટ</label><input id="importFile" class="hidden" type="file" accept="application/json" onchange="importData(event)"><button class="btn" onclick="exportCSV()">CSV એક્સપોર્ટ</button><button class="btn danger" onclick="resetData()">બધો ડેટા રીસેટ</button></div><div class="notice" style="margin-top:15px">⚠️ બ્રાઉઝરનો ડેટા સાફ કરશો અથવા બીજો ફોન વાપરશો તો બેકઅપ વગર જૂની એન્ટ્રીઓ ન મળે. JSON બેકઅપ નિયમિત રાખો. આ આવૃત્તિમાં ક્લાઉડ સિંક અથવા બહુ-મોબાઇલ લાઇવ શેરિંગ નથી.</div></section>
+ <section class="panel"><h2>હિસાબના નિયમો</h2><p>પાણીનું બિલ = પિયત કલાક × તે એન્ટ્રીનો દર.</p><p>ભાગીદારની બાકી પાણી રકમ = તેની કુલ પાણીની રકમ − તેની ચુકવણીઓ.</p><p>સામૂહિક ખર્ચનો અંદાજિત હિસ્સો = કુલ ખર્ચ × હિસ્સો ÷ કુલ ભાગીદારી.</p><p class="muted small">આવક, ચુકવણી અને ખર્ચ અલગ ખાતામાં રાખવામાં આવે છે જેથી ખોટી રીતે એકબીજામાં બાદબાકી ન થાય.</p></section>
+</div>
+<button class="floating-add" onclick="go('irrigation')" aria-label="નવી પિયત એન્ટ્રી">＋</button>
+<div id="toastHost" class="toast-host" aria-live="polite"></div>
+</main></div>
+<div class="mobilebar" id="mobilebar"><button class="active" data-tab="home"><span>▦</span>હોમ</button><button data-tab="irrigation"><span>◉</span>પિયત</button><button data-tab="payments"><span>₹</span>ચુકવણી</button><button data-tab="reports"><span>▤</span>રિપોર્ટ</button><button data-tab="settings"><span>⚙</span>વધુ</button></div>
+<script>
+const KEY='bor_sathi_v1';
+const seedPartners=[
+['જયંતીભાઈ શંકરભાઈ પટેલ',5.83],['રમેશભાઈ શંકરભાઈ પટેલ',5.83],['હરગોવિંદભાઈ શંકરભાઈ પટેલ',5.84],['ચમનભાઈ માનસુંગભાઈ પટેલ',5.83],['કીર્તિભાઈ માનસુંગભાઈ પટેલ',5.83],['દશરથભાઈ માનસુંગભાઈ પટેલ',5.84],['બાબુભાઈ જીવાભાઈ પટેલ',17.5],['ગોવિંદભાઈ મૂળચંદભાઈ પટેલ',17.5],['ગાંડાભાઈ રત્નાભાઈ પટેલ',10],['લાલાભાઈ જયંતીભાઈ પટેલ',10],['નટવરભાઈ રત્નાભાઈ પટેલ',10]];
+const seedLands=[
+['જયંતીભાઈ શંકરભાઈ પટેલ','બોરવાળું',1.5],['હરગોવિંદભાઈ શંકરભાઈ પટેલ','દોઢ વિઘા',1.5],['જયંતીભાઈ શંકરભાઈ પટેલ','કાપલી',1],['મૂળચંદભાઈ', 'બોરવાળું',1.5],['બાબુભાઈ','બોરવાળું',1.5],['સામુબેન','બોરવાળું',1.5],['દશરથભાઈ','ગાંડાવાળું',1.25],['કીર્તિભાઈ','ગાંડાવાળું',1.25],['ચમનભાઈ','ગાંડાવાળું',1.25],['રમેશભાઈ','ફાટાવાળું',2.75],['મૂળચંદભાઈ','ફાટાવાળું',2.75],['બાબુભાઈ','ફાટાવાળું',2.75],['ચમનભાઈ','ફાટાવાળું',2.75],['મૂળચંદભાઈ','ધૂળાવાળું',3.5],['બાબુભાઈ','કાપલી',1],['મૂળચંદભાઈ','સોવાડિયું',3.5],['દશરથભાઈ','સોવાડિયું',3.5],['જયંતીભાઈ રત્નાભાઈ','સેદડિવાળું',3.5],['જયંતીભાઈ રત્નાભાઈ','ખારાવાળું',1.25],['નટવરભાઈ રત્નાભાઈ','ખારાવાળું',1.25],['નટવરભાઈ','ભેમોસણિયું',4],['ગાંડાભાઈ રત્નાભાઈ','ખારાવાળું',1.25],['ગાંડાભાઈ રત્નાભાઈ','ભેમોસણિયું',3.5],['ગાંડાભાઈ રત્નાભાઈ','કાપલી',2],['ભીખાભાઈ મોહનભાઈ','ફાટાવાળું',7],['ભીખાભાઈ હરિભાઈ','ફાટાવાળું',4]
+];
+const uid=()=>Math.random().toString(36).slice(2)+Date.now().toString(36);
+const today=()=>new Date().toISOString().slice(0,10);
+let db;
+function initial(){return {settings:{name:'બોર સાથી',rate:5.83,operator:''},partners:seedPartners.map(([name,share])=>({id:uid(),name,share})),lands:seedLands.map(([owner,field,vigha])=>({id:uid(),owner,field,vigha})),irrigation:[],payments:[],expenses:[]}}
+function load(){try{const x=JSON.parse(localStorage.getItem(KEY));db=x&&x.partners?x:initial()}catch{db=initial()}save()}
+function save(){localStorage.setItem(KEY,JSON.stringify(db));}
+const el=id=>document.getElementById(id), n=x=>Number(x)||0, fmt=x=>'₹ '+n(x).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2}), esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function pname(id){return db.partners.find(p=>p.id===id)?.name||'—'}
+function sum(a,fn){return a.reduce((s,x)=>s+fn(x),0)}
+function totals(p){let ir=db.irrigation.filter(x=>x.partnerId===p.id),hours=sum(ir,x=>n(x.hours)),charge=sum(ir,x=>n(x.hours)*n(x.rate)),paid=sum(db.payments.filter(x=>x.partnerId===p.id),x=>n(x.amount));return {hours,charge,paid,balance:charge-paid}}
+function go(tab){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.id===tab));document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab));let names={home:'ડેશબોર્ડ',partners:'ભાગીદારો',lands:'જમીન / ખેતર',irrigation:'પિયત એન્ટ્રી',payments:'ચુકવણી',expenses:'ખર્ચ',reports:'રિપોર્ટ',settings:'સેટિંગ્સ / બેકઅપ'};el('pageTitle').textContent=names[tab];if(tab==='reports')renderReports();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.tab)));
+function fillSelects(){['iPartner','pPartner','ePayer'].forEach(id=>{let s=el(id),v=s.value;s.innerHTML=db.partners.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('');if([...s.options].some(o=>o.value===v))s.value=v});el('landOptions').innerHTML=db.lands.map(l=>`<option value="${esc(l.field)}">${esc(l.owner)}</option>`).join('')}
+function render(){fillSelects();renderDashboard();renderPartners();renderLands();renderIrrigation();renderPayments();renderExpenses();renderReports();el('defaultRate').value=db.settings.rate;el('operator').value=db.settings.operator||'';el('boreName').value=db.settings.name||'';el('iRate').value=db.settings.rate}
+function renderDashboard(){let allHours=sum(db.irrigation,x=>n(x.hours)),income=sum(db.irrigation,x=>n(x.hours)*n(x.rate)),paid=sum(db.payments,x=>n(x.amount)),due=income-paid,expense=sum(db.expenses,x=>n(x.amount)),vigha=sum(db.lands,x=>n(x.vigha)),shares=sum(db.partners,x=>n(x.share));let collection=income>0?Math.max(0,Math.min(100,paid/income*100)):0;if(el('insightHours'))el('insightHours').textContent=allHours.toFixed(2)+' કલાક';if(el('insightPaid'))el('insightPaid').textContent=collection.toFixed(0)+'%';if(el('insightExpense'))el('insightExpense').textContent=fmt(expense);if(el('progressLabel'))el('progressLabel').textContent=collection.toFixed(0)+'%';if(el('paymentProgress'))el('paymentProgress').style.width=collection+'%';el('sPartners').textContent=db.partners.length;el('sHours').textContent=allHours.toFixed(2);el('sIncome').textContent=fmt(income);el('sDue').textContent=fmt(due);el('sExpense').textContent=fmt(expense);el('sPaid').textContent=fmt(paid);el('sVigha').textContent=vigha.toFixed(2);el('sShare').textContent=shares.toFixed(2)+'%';let max=Math.max(1,...db.partners.map(p=>totals(p).charge));el('partnerBars').innerHTML=db.partners.map(p=>{let t=totals(p);return `<div class="barrow"><span>${esc(p.name)}</span><div class="bar"><i style="width:${Math.max(0,t.charge/max*100)}%"></i></div><b>${fmt(t.charge)}</b></div>`}).join('')||'<div class="empty">ભાગીદારો ઉમેરો</div>';let recent=[...db.irrigation].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,7);el('recentRows').innerHTML=recent.map(x=>`<tr><td>${x.date}</td><td>${esc(pname(x.partnerId))}</td><td>${esc(x.field)}</td><td>${n(x.hours).toFixed(2)}</td><td>${fmt(n(x.hours)*n(x.rate))}</td></tr>`).join('')||'<tr><td colspan="5" class="empty">હજુ પિયત એન્ટ્રી નથી.</td></tr>'}
+function renderPartners(){let total=sum(db.partners,p=>n(p.share));el('shareTotal').textContent=total.toFixed(2)+'%';el('shareWarning').innerHTML=Math.abs(total-100)<.001?'<span class="pill">100% બરાબર</span>':'<span class="pill amber">100% થી '+(total-100).toFixed(2)+'% તફાવત — ચકાસો</span>';el('partnerRows').innerHTML=db.partners.map((p,i)=>{let t=totals(p);return `<tr><td>${i+1}</td><td><input class="wide" value="${esc(p.name)}" onchange="editPartner('${p.id}','name',this.value)"></td><td><input type="number" min="0" step=".01" value="${p.share}" onchange="editPartner('${p.id}','share',this.value)"></td><td>${t.hours.toFixed(2)}</td><td>${fmt(t.charge)}</td><td>${fmt(t.paid)}</td><td class="${t.balance>0?'balance-pos':'balance-neg'}">${fmt(t.balance)}</td><td><button class="btn sm danger" onclick="removePartner('${p.id}')">કાઢો</button></td></tr>`}).join('')}
+function addPartner(){let name=prompt('ભાગીદારનું નામ લખો');if(!name)return;db.partners.push({id:uid(),name,share:0});save();render()}
+function editPartner(id,k,v){let p=db.partners.find(x=>x.id===id);if(p){p[k]=k==='share'?n(v):v;save();render()}}
+function removePartner(id){if(!confirm('આ ભાગીદાર અને તેની જોડાયેલી પિયત/ચુકવણી એન્ટ્રીઓ કાઢવી છે?'))return;db.partners=db.partners.filter(p=>p.id!==id);db.irrigation=db.irrigation.filter(x=>x.partnerId!==id);db.payments=db.payments.filter(x=>x.partnerId!==id);db.expenses.forEach(x=>{if(x.payerId===id)x.payerId=''});save();render()}
+function renderLands(){el('landRows').innerHTML=db.lands.map((l,i)=>`<tr><td>${i+1}</td><td><input class="wide" value="${esc(l.owner)}" onchange="editLand('${l.id}','owner',this.value)"></td><td><input class="wide" value="${esc(l.field)}" onchange="editLand('${l.id}','field',this.value)"></td><td><input type="number" min="0" step=".01" value="${l.vigha}" onchange="editLand('${l.id}','vigha',this.value)"></td><td><button class="btn sm danger" onclick="removeLand('${l.id}')">કાઢો</button></td></tr>`).join('')}
+function addLand(){db.lands.push({id:uid(),owner:'',field:'',vigha:0});save();renderLands()}
+function editLand(id,k,v){let l=db.lands.find(x=>x.id===id);if(l){l[k]=k==='vigha'?n(v):v;save();renderLands();fillSelects()}}
+function removeLand(id){if(confirm('આ જમીનની નોંધ કાઢવી છે?')){db.lands=db.lands.filter(x=>x.id!==id);save();render()}}
+function previewCharge(){el('iAmount').value=fmt(n(el('iHours').value)*n(el('iRate').value))}
+function clearIrrigation(){['iField','iHours','iNote'].forEach(id=>el(id).value='');el('iDate').value=today();previewCharge()}
+function saveIrrigation(){let partnerId=el('iPartner').value,field=el('iField').value.trim(),hours=n(el('iHours').value),rate=n(el('iRate').value);if(!partnerId||!field||hours<=0||rate<0){alert('ભાગીદાર, ખેતર અને શૂન્યથી વધુ કલાક દાખલ કરો.');return}db.irrigation.push({id:uid(),date:el('iDate').value||today(),partnerId,field,hours,rate,note:el('iNote').value.trim()});save();clearIrrigation();render();showToast('પિયત એન્ટ્રી સેવ થઈ ગઈ.')}
+function renderIrrigation(){let q=(el('iSearch')?.value||'').toLowerCase(),rows=[...db.irrigation].filter(x=>(pname(x.partnerId)+' '+x.field).toLowerCase().includes(q)).sort((a,b)=>b.date.localeCompare(a.date));el('irrigationRows').innerHTML=rows.map(x=>`<tr><td>${x.date}</td><td>${esc(pname(x.partnerId))}</td><td>${esc(x.field)}</td><td>${n(x.hours).toFixed(2)}</td><td>${fmt(x.rate)}</td><td>${fmt(x.hours*x.rate)}</td><td>${esc(x.note)}</td><td><button class="btn sm danger" onclick="deleteRow('irrigation','${x.id}')">કાઢો</button></td></tr>`).join('')||'<tr><td colspan="8" class="empty">કોઈ એન્ટ્રી મળી નથી.</td></tr>'}
+function savePayment(){let amount=n(el('pAmount').value);if(!el('pPartner').value||amount<=0){alert('ભાગીદાર અને રકમ દાખલ કરો.');return}db.payments.push({id:uid(),date:el('pDate').value||today(),partnerId:el('pPartner').value,amount,method:el('pMethod').value,note:el('pNote').value.trim()});save();el('pAmount').value='';el('pNote').value='';render();showToast('ચુકવણી સેવ થઈ.')}
+function renderPayments(){el('paymentRows').innerHTML=[...db.payments].sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${x.date}</td><td>${esc(pname(x.partnerId))}</td><td>${fmt(x.amount)}</td><td>${esc(x.method)}</td><td>${esc(x.note)}</td><td><button class="btn sm danger" onclick="deleteRow('payments','${x.id}')">કાઢો</button></td></tr>`).join('')||'<tr><td colspan="6" class="empty">ચુકવણી નોંધ નથી.</td></tr>'}
+function saveExpense(){let amount=n(el('eAmount').value);if(amount<=0){alert('ખર્ચની રકમ દાખલ કરો.');return}db.expenses.push({id:uid(),date:el('eDate').value||today(),category:el('eCategory').value,amount,payerId:el('ePayer').value,note:el('eNote').value.trim()});save();el('eAmount').value='';el('eNote').value='';render();showToast('ખર્ચ સેવ થયો.')}
+function renderExpenses(){el('expenseRows').innerHTML=[...db.expenses].sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${x.date}</td><td>${esc(x.category)}</td><td>${fmt(x.amount)}</td><td>${esc(pname(x.payerId))}</td><td>${esc(x.note)}</td><td><button class="btn sm danger" onclick="deleteRow('expenses','${x.id}')">કાઢો</button></td></tr>`).join('')||'<tr><td colspan="6" class="empty">ખર્ચ નોંધાયો નથી.</td></tr>'}
+function deleteRow(type,id){if(confirm('આ એન્ટ્રી કાઢી નાખવી છે?')){db[type]=db[type].filter(x=>x.id!==id);save();render()}}
+function renderReports(){let shareTotal=sum(db.partners,p=>n(p.share)),expense=sum(db.expenses,x=>n(x.amount));el('reportRows').innerHTML=db.partners.map(p=>{let t=totals(p),cost=shareTotal?expense*p.share/shareTotal:0;return `<tr><td>${esc(p.name)}</td><td>${n(p.share).toFixed(2)}%</td><td>${t.hours.toFixed(2)}</td><td>${fmt(t.charge)}</td><td>${fmt(t.paid)}</td><td class="${t.balance>0?'balance-pos':'balance-neg'}">${fmt(t.balance)}</td><td>${fmt(cost)}</td></tr>`}).join('');let by={};db.lands.forEach(x=>by[x.field]=(by[x.field]||0)+n(x.vigha));el('landReport').innerHTML=Object.entries(by).map(([k,v])=>`<div class="barrow"><span>${esc(k)}</span><div class="bar"><i style="width:${Math.min(100,v/Math.max(1,...Object.values(by))*100)}%"></i></div><b>${v.toFixed(2)} વિઘા</b></div>`).join('')||'<p class="muted">જમીન નોંધો ઉમેરો.</p>';let income=sum(db.irrigation,x=>x.hours*x.rate),paid=sum(db.payments,x=>x.amount);el('financeReport').innerHTML=`<div class="barrow"><span>પાણીની આવક</span><b>${fmt(income)}</b><span></span></div><div class="barrow"><span>ચુકવણી</span><b>${fmt(paid)}</b><span></span></div><div class="barrow"><span>પાણીની બાકી</span><b>${fmt(income-paid)}</b><span></span></div><div class="barrow"><span>સામૂહિક ખર્ચ</span><b>${fmt(expense)}</b><span></span></div>`}
+function saveSettings(){db.settings={name:el('boreName').value,rate:n(el('defaultRate').value),operator:el('operator').value};save();el('iRate').value=db.settings.rate;showToast('સેટિંગ્સ સેવ થઈ.')}
+function exportData(){let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='bor-sathi-backup-'+today()+'.json';a.click();URL.revokeObjectURL(a.href)}
+function importData(ev){let f=ev.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!x.partners||!x.lands||!x.irrigation||!x.payments||!x.expenses)throw Error();if(!confirm('હાલનો ડેટા બદલીને બેકઅપ ઇમ્પોર્ટ કરવો છે?'))return;db=x;save();render();showToast('બેકઅપ ઇમ્પોર્ટ થયો.')}catch{alert('આ બેકઅપ ફાઇલ યોગ્ય નથી.')}ev.target.value=''};r.readAsText(f)}
+function exportCSV(){let rows=[['Date','Partner','Field','Hours','Rate','Amount'],...db.irrigation.map(x=>[x.date,pname(x.partnerId),x.field,x.hours,x.rate,x.hours*x.rate])];let csv='\uFEFF'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='bor-sathi-irrigation-'+today()+'.csv';a.click();URL.revokeObjectURL(a.href)}
+function resetData(){if(confirm('ખરેખર બધો ડેટા કાઢી નાખવો છે? પહેલાં બેકઅપ લેવાની ખાતરી કરો.')){if(confirm('આ ક્રિયા પાછી ફેરવી શકાશે નહીં. આગળ વધવું છે?')){db=initial();save();render()}}}
+load();el('today').textContent=new Date().toLocaleDateString('gu-IN',{weekday:'long',year:'numeric',month:'long',day:'numeric'});['iDate','pDate','eDate'].forEach(id=>el(id).value=today());render();previewCharge();
+</script>
+
+<script id="premium-interactions">
+function showToast(message){
+ const host=document.getElementById('toastHost');
+ if(!host){window.alert(message);return}
+ const node=document.createElement('div');node.className='toast-message';node.textContent='✓  '+message;host.appendChild(node);
+ setTimeout(()=>{node.style.opacity='0';node.style.transform='translateY(8px)';setTimeout(()=>node.remove(),220)},2600);
+}
+document.addEventListener('click',e=>{
+ const btn=e.target.closest('button');
+ if(btn && !btn.disabled && !btn.classList.contains('danger')){
+  btn.classList.add('tap-feedback');setTimeout(()=>btn.classList.remove('tap-feedback'),180);
+ }
+});
+</script>
+
+</body></html>
